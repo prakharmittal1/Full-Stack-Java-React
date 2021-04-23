@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import './index.css';
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -76,7 +77,7 @@ class App extends React.Component {
         <div class="input-field col s12">
           <i class="material-icons prefix">person</i>
           <input onChange={(e)=>this.setState({name:e.target.value})} value={this.state.name} type="text" id="autocomplete-input" class="autocomplete" />
-          <label for="autocomplete-input">Autocomplete</label>
+          <label for="autocomplete-input">Name</label>
         </div>
         <div class="input-field col s12">
           <i class="material-icons prefix">email</i>
@@ -113,12 +114,12 @@ class App extends React.Component {
                 <td>{user.email}</td>
                 <td>{user.password}</td>
                 <td>
-                <button onClick={(e)=>this.edit(user.id)} class="btn waves-effect waves-light" type="submit" name="action">
+                <button onClick={(e)=>this.edit(user.id)} class="btn waves-effect.waves-brown .waves-ripple" type="submit" name="action">
                   <i class="material-icons">edit</i>
                 </button>
                 </td>
                 <td>
-                <button onClick={(e)=>this.delete(user.id)} class="btn waves-effect waves-light" type="submit" name="action">
+                <button onClick={(e)=>this.delete(user.id)} class="waves-effect.waves-brown .waves-ripple btn waves-effect circle-light" type="submit" name="action">
                   <i class="material-icons">delete</i>
                 </button>
                 </td>
